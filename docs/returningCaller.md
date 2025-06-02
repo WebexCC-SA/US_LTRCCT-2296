@@ -59,13 +59,13 @@
 > 
 > Select Use Authenticated Endpoint
 >
-> Connector: WxCC_API
+> Connector: <copy>WxCC_API</copy>
 > 
-> Path: /search
+> Path: <copy>/search</copy>
 > 
-> Method: POST
+> Method: <copy>POST</copy>
 > 
-> Content Type: GraphQL
+> Content Type: <copy>GraphQL</copy>
 >
 > Copy this GraphQL query section:
 >
@@ -97,8 +97,8 @@ query lastTen(
 > Copy this into the Variables section:
 ``` JSON
 {
-  "from": "{{now() | epoch(inMillis=true) - 600000}}", # time now - 10 minutes represented in EPOCH time(ms)
-  "to": "{{now() | epoch(inMillis=true)}}", # time now represented in EPOCH time(ms)
+  "from": "{{now() | epoch(inMillis=true) - 600000}}",
+  "to": "{{now() | epoch(inMillis=true)}}",
   "timeComparator": "endedTime",
   "filter": {
     "and": [
@@ -109,7 +109,7 @@ query lastTen(
       },
       {
         "origin": {
-          "equals": "{{NewPhoneContact.ANI}}" # ANI or caller phone number
+          "equals": "{{NewPhoneContact.ANI}}"
         }
       },
       {
@@ -124,17 +124,17 @@ query lastTen(
 
 > Parse Settings:
 >
-> Content Type: JSON
+> Content Type: <copy>JSON</copy>
 >
-> - Output Variable: `previousID`
-> - Path Expression: <copy>`$.data.task.tasks[0].id`</copy>
+> - Output Variable: <copy>previousID</copy>
+> - Path Expression: <copy>$.data.task.tasks[0].id</copy>
 >
 > ---
 
 ### Add a Condition node
 > Connect the output from the HTTP Request node to this node
 >
-> Expression: <copy>`{{previousID is empty}}`</copy>
+> Expression: <copy>{{previousID is empty}}</copy>
 >
 > We will connect the True node in a future step.
 >
@@ -162,7 +162,7 @@ query lastTen(
 > 
 > Select Static Queue
 >
-> Queue: <w class="Queue">yourQueueID</w>
+> Queue: <copy><w class="Queue">yourQueueID</w></copy>
 >
 > Select Static Priority
 >

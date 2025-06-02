@@ -54,7 +54,7 @@
 >
 > Enable Text-To-Speech
 >
-> Select the Connector: Cisco Cloud Text-to-Speech
+> Select the Connector: <copy>Cisco Cloud Text-to-Speech</copy>
 >
 > Click the Add Text-to-Speech Message button
 >
@@ -70,13 +70,13 @@
 >
 > Select Use Authenticated Endpoint
 >
-> Connector: WxCC_API
+> Connector: <copy>WxCC_API</copy>
 > 
-> Path: /search
+> Path: <copy>/search</copy>
 > 
-> Method: POST
+> Method: <copy>POST</copy>
 > 
-> Content Type: GraphQL
+> Content Type: <copy>GraphQL</copy>
 >
 > Copy this GraphQL query into the request body:
 > 
@@ -105,8 +105,8 @@ query simulatedCSAT(
 > Variables:
 ```JSON
 {
-  "from": "{{now() | epoch(inMillis=true) - 604800000}}", # time now - 1 week represented in EPOCH time(ms)
-  "to": "{{now() | epoch(inMillis=true)}}", # time now represented in EPOCH time(ms)
+  "from": "{{now() | epoch(inMillis=true) - 604800000}}",
+  "to": "{{now() | epoch(inMillis=true)}}",
   "timeComparator": "endedTime",
   "filter": {
     "and": [
@@ -121,7 +121,7 @@ query simulatedCSAT(
         }
       },
       {
-        "doubleGlobalVariables": { #Filtering on the Global Variable simulatedCSAT to be greater or equal to 3 
+        "doubleGlobalVariables": {  
           "name": {
             "equals": "simulatedCSAT" 
           },
@@ -132,27 +132,27 @@ query simulatedCSAT(
       }
     ]
   },
-  "name": "simulatedCSAT" #The Alias name used for the global variable in the returned fields
+  "name": "simulatedCSAT" 
 }
 ```
 </details>
 
 > Parse Settings:
 >
-> Content Type: JSON
+> Content Type: <copy>JSON</copy>
 >
-> - Output Variable: `agentID`
-> - Path Expression: <copy>`$.data.task.tasks[0].owner.id`</copy>
+> - Output Variable: <copy>agentID</copy>
+> - Path Expression: <copy>$.data.task.tasks[0].owner.id</copy>
 >
-> - Output Variable: `queriedCSAT`
-> - Path Expression: <copy>`$.data.task.tasks[0].simulatedCSAT.value`</copy>
+> - Output Variable: <copy>queriedCSAT</copy>
+> - Path Expression: <copy>$.data.task.tasks[0].simulatedCSAT.value</copy>
 >
 ---
 
 ### Add a Condition node
-> Connect the output node edge from teh HTTP Request node to this node
+> Connect the output node edge from the HTTP Request node to this node
 > 
-> Expression: <copy>`{{agentID is empty}}`</copy>
+> Expression: <copy>{{agentID is empty}}</copy>
 >
 > We will connect the True node in a future step.
 >
@@ -161,9 +161,9 @@ query simulatedCSAT(
 ---
 
 ### Add a Queue To Agent node
-> Agent Variable: agentID
+> Agent Variable: <copy>agentID</copy>
 >
-> Agent Lookup Type: ID
+> Agent Lookup Type: <copy>ID</copy>
 >
 > Set Contact Priority: True
 >
@@ -171,11 +171,11 @@ query simulatedCSAT(
 >
 > Static Priority Value: P1
 >
-> Reporting Queue: <w class="Queue">yourQueueID</w>
+> Reporting Queue: <copy><w class="Queue">yourQueueID</w></copy>
 >
 > Park Contact if Agent Unavailable: False
 >
-> Recovery Queue: <w class="Queue">yourQueueID</w>
+> Recovery Queue: <copy><w class="Queue">yourQueueID</w></copy>
 >
 > Connect the Output and Error node edges to the Queue Contact node created in the next step
 ---
@@ -185,7 +185,7 @@ query simulatedCSAT(
 > 
 > Select Static Queue
 >
-> Queue: <w class="Queue">yourQueueID</w>
+> Queue: <copy><w class="Queue">yourQueueID</w></copy>
 >
 > Connect the Output node edge from this node to the Subflow node
 ---
