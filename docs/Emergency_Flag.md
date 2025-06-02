@@ -21,8 +21,8 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 ##  Preconfigured Elements
 
 1. **Global Variable**:
-   - Please reach out to Proctor to get a Boolean global variable named `emergencyFlag_<YourPodID>` 
-   - Proactor will also give you Global Variable ID 
+   - Please reach out to Proctor to get a Boolean global variable named emergencyFlag_<w class="POD"></w> 
+   - Proctor will also give you Global Variable ID 
    - This variable holds the current Emergency status (true/false).
 
 2. **Connector**:
@@ -102,18 +102,18 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 
 > Under Connector Select ```Wxcc_API``` 
 
-> Request Path: <copy>`/organization/e56f00d4-98d8-4b62-a165-d05a41243d98/cad-variable/{{Gloabal_ID}}`</copy>
+> Request Path: <copy>`/organization/e56f00d4-98d8-4b62-a165-d05a41243d98/cad-variable/{{Global_ID}}`</copy>
 
-> Example ```/organization/e56f00d4-98d8-4b62-a165-d05a41243d98/cad-variable/{{Gloabal_ID}}``` 
+> Example ```/organization/e56f00d4-98d8-4b62-a165-d05a41243d98/cad-variable/{{Global_ID}}``` 
 
 >The ID can be found in Flows>Global Variables>Select `emergencyFlag_<YourPodID>` and copy the ```ID``` , Lab Proctor will give this ID 
 
-### <details><summary>GlobalVariable_ID</summary>![](Emer_Resp/Img/GV_ID.jpg)</details>
+### <details><summary>GlobalVariable_ID</summary>![](assets/GV_ID.jpg)</details>
 
 
 > Under Connector Select ```GET``` 
 >
-> Under Connector Select ```Appliation/JSON``` 
+> Under Connector Select ```Application/JSON``` 
 >
 
 > ParseSetting 
@@ -152,7 +152,7 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 >
 >> Click Add New
 >>
->> Current Flow Variable: <copy>Gloabal_ID</copy>
+>> Current Flow Variable: <copy>Global_ID</copy>
 >>
 >> Subflow Input Variable: <copy>GV_ID</copy>
 > 

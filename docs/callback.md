@@ -62,6 +62,15 @@
     >
     > Connect the outbound node edge from LOBmessages1 to the inbound node edge of this Condition node
     >
+    ---
+
+    ### Edit the Callback node settings
+    > Open the Callback node
+    >
+    > Find teh Register callback to different location switch and turn it off
+    >
+    ---
+
     ??? Note "Check your flow"    
         ![](./assets/CBWithMulti.png)
 
