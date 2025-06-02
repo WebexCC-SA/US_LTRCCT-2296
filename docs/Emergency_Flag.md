@@ -177,7 +177,7 @@ Click Add New
 >
 ---
 
-### <details><summary>CheckyourFlow</summary>![checkyourFlow](Emer_Resp/Img/EmergencyFlow.jpg)</details>
+### <details><summary>CheckyourFlow</summary>![checkyourFlow](assets/EmergencyFlow.jpg)</details>
 
 ## Publish Your Flow
 
