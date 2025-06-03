@@ -27,16 +27,12 @@ In this section of the lab you are going to choose your own adventure from the l
 ### [Dynamically Controlling Emergency Flag in Webex Contact Center Using API](Emergency_Flag.md)
 >In this lab, you will learn how to **dynamically record or update an Emergency prompt** in Webex Contact Center (WxCC). This is especially useful during emergency scenarios where a **Supervisor or Administrator** needs to record a new message or update an existing one in real-time — for instance, during a sudden outage or a weather-related closure.
 
-The flow also includes an option to delete an audio file. **However, it is strongly recommended not to delete any prompts during this lab**. The delete option is provided for completeness and for those looking to reuse the same flow in a production environment.
-
-
 ### [Dynamically Controlling Emergency Audio in Webex Contact Center Using API](Emergency_Audio.md)
->In this lab, you will learn how to **dynamically record or update an Emergency prompt** in Webex Contact Center (WxCC). This is especially useful during emergency scenarios where a **Supervisor or Administrator** needs to record a new message or update an existing one in real-time — for instance, during a sudden outage or a weather-related closure.
+> In this lab, you will learn how to **dynamically record or update an Emergency prompt** in Webex Contact Center (WxCC). This is especially useful during emergency scenarios where a **Supervisor or Administrator** needs to record a new message or update an existing one in real-time — for instance, during a sudden outage or a weather-related closure.
 
-The flow also includes an option to delete an audio file. **However, it is strongly recommended not to delete any prompts during this lab**. The delete option is provided for completeness and for those looking to reuse the same flow in a production environment.
 
 
 ### [Prevent Duplicate Callback Requests Using a Subflow](dupCheck.md)
->
+> When you have unexpectedly long wait times it is not uncommon for customers to call back in and create multiple callback requests.  In this lab we will identify callers which already have a callback in queue and we will let the caller hear their current position in the queue, so that they know when they can expect to receive a callback.
 
 
