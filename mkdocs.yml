@@ -1,7 +1,7 @@
 ---
 site_name: LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer
 site_description: LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer
-site_author: Dimitri Bokatov, Yaroslav Bondar, Taylan Kucuk
+site_author: Kevin Simpson, Chandramouli Vaithiyanathan
 # must be same as "site_name"
 copyright: Copyright &copy; 2025 Cisco Systems Inc. All Rights Reserved.
 theme:
@@ -150,6 +150,7 @@ nav:
 ##            - "Hint for Final Challenge Mission!": ./main/FinalBossFight_Hint1.md
 ##            - "Solution Guidance for Final Challenge Fight Mission!": ./main/FinalBossFight_Solution.md
   - Cheat Sheet: cheatsheet.md
+  - Login Info: creds.md
   # - Quick Links: quicklinks.md
   - Ask a Question<i class="fa-solid fa-hand" style="color:#63E6BE;"></i>: slido-QA-iFrame.md
 
