@@ -1,16 +1,7 @@
 # Offering a Callback option to calls actively waiting in the queue
 
 ## Story
-> If your wait times are longer than your caller wants to listen to your hold music for, you can offer to hold their place in the queue and call them back when it is their turn.  In this lab you will be adding the callback functionality to the CL<w class="POD"></w>_core flow.
-
-### High Level Explanation
-1. This section is optional but can explain the order of operations
-2. 
-
-
-## Preconfigured elements
-1. If you are using a prebuilt subflow or function 
-2. You should call attention to a shared configuration item which is important to the success of the flow, like a connector  
+> If your wait times are longer than your caller wants to listen to your hold music, you can offer to hold their place in the queue and call them back when it is their turn.  In this lab you will be adding the callback functionality to the CL<w class="POD"></w>_core flow.
 
 
 ## Build

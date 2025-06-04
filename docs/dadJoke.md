@@ -1,10 +1,7 @@
 # Dial-A-Dad-Joke
 
 ## Story
-> Not every learning exercise needs to be overly serious.  This exercise is a fun way to explore the basics of and http request, JSON, text-to-speech, and basic flow logic, all while getting a little giggle.  
-
-
-In this lab we will be using https://icanhazdadjoke.com to retrieve a Dad Joke via API
+> Not every learning exercise needs to be overly serious.  This exercise is a fun way to explore the basics of and http request, JSON, text-to-speech, and basic flow logic, all while getting a little giggle.  In this lab we will be using https://icanhazdadjoke.com to retrieve a Dad Joke via API and play the joke to the caller.
 
 ## Build
 
@@ -105,11 +102,20 @@ In this lab we will be using https://icanhazdadjoke.com to retrieve a Dad Joke v
 
 
 ## Testing
-1. Launch the [Agent Desktop](https://desktop.wxcc-us1.cisco.com/) and log in using the Desktop option.
-2. Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy>
-3. list the streps
-      1. double indent sub steps or sections
-4. 
+1. Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy>
+      1. You should hear a joke and the call will disconnect
+
+---
+
+## Challenge
+> How could you create an option to hear another joke?
+>
+> ??? note "Answer"
+    > Add a Menu node after the play message node
+    >
+    > Add a single menu option with a TTS message which offers to play another joke
+    >
+    > Connect the timeout and invalid choice node edges connect to the disconnect call node.    
 
 
 

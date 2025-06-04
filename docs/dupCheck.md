@@ -3,15 +3,20 @@
 ## Story
 > When you have unexpectedly long wait times it is not uncommon for customers to call back in and create multiple callback requests.  In this lab we will identify callers which already have a callback in queue and we will let the caller hear their current position in the queue, so that they know when they can expect to receive a callback.
 
+
+
 ### High Level Explanation
-1. This section is optional but can explain the order of operations
-2. 
+1. We will create a Subflow which will make up to two API calls.
+      1. The first call will check to see if there is an existing callback in queue for the callers phone number
+      2. If there is a call in the queue already, the second API call will retrieve a list of calls then we will see where in line the call is and tell the caller.
+2. We will also create a special Flow just for testing. 
 
+---
 
-## Preconfigured elements
-1. If you are using a prebuilt subflow or function 
-2. You should call attention to a shared configuration item which is important to the success of the flow, like a connector  
+## Preconfigured Elements
+1. Connector for calling Webex Contact Center APIs
 
+---
 
 ## Build
 ### Create a new Subflow
@@ -447,8 +452,30 @@ query PIQlist(
 1. Launch the [Agent Desktop](https://desktop.wxcc-us1.cisco.com/) and log in using the Desktop option.
 2. On your Agent Desktop, make sure your status is not set to available
       1. Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy>
-      2. 
-3. 
+         1. Choose menu option 1
+            1. You should take the path to receive a callback
+      2. Using Webex, place another call to your Inbound Channel number <copy><w class="DN"></w></copy>
+         1. Choose option 1 again
+            1. You should hear that you have a callback pending, your position in the queue, and the call should disconnect
+      3. Optional: Using a mobile device or other phone number, place a call to your Inbound Channel number <copy><w class="DN"></w></copy>
+         1. Choose menu option 1
+            1. You should take the path to receive a callback
+      4. Optional: Using a mobile device or other phone number, place another call to your Inbound Channel number <copy><w class="DN"></w></copy>
+         1. Choose menu option 1
+            1. You should hear that you have a callback pending, your position in the queue, and the call should disconnect
+??? note "If you made to optional call from another number"
+      1. Go Available in the agent desktop
+        1. Accept the call on the agent desktop and then answer the call in Webex
+        2. End the call and change your status to not available before wrapping up the call
+        3. Using a mobile device or other phone number, place another call to your Inbound Channel number <copy><w class="DN"></w></copy>
+         4. Choose menu option 1
+            1. You should hear that you have a callback pending, your position in the queue, and the call should disconnect
+         5. Go available again, accept the call on the agent desktop, and then answer the call in Webex
+            1. End the call, wrap up the call, and change your status to not available
+??? note "If you did not make the optional call from another number"
+        1. Go Available in the agent desktop
+        1. Accept the call on the agent desktop and then answer the call in Webex
+        2. End the call, wrap up the call, and change your status to not available
 
 
 

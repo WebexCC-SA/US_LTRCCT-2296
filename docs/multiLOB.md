@@ -3,15 +3,6 @@
 ## Story
 > You do not always need to create a new flow for each line of business in the contact center, instead you can often reuse your flow logic and account for the differences including different queues and wait treatments.  In this lab you will be adding a new line of business to the CL<w class="POD"></w>_core</copy> flow.
 
-### High Level Explanation
-1. This section is optional but can explain the order of operations
-2. 
-
-
-## Preconfigured elements
-1. If you are using a prebuilt subflow or function 
-2. You should call attention to a shared configuration item which is important to the success of the flow, like a connector  
-
 
 ## Build
 ### Open flow <copy>CL<w class="POD"></w>_core</copy>
