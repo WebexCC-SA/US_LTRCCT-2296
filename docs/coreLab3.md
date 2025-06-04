@@ -40,6 +40,8 @@ In this section of the lab we will continue building and testing together.  We w
 ## Build
 
 ### Open flow <copy>CL<w class="POD"></w>_core</copy>
+> If your flow is still open, refresh the browser tab
+> 
 > Toggle the Edit switch on
 >
 ---
@@ -52,6 +54,8 @@ In this section of the lab we will continue building and testing together.  We w
 > Business Hour: <copy>CL<w class="POD"></w>_Business Hours</copy>
 >
 > Delete the connection between New Phone Contact node and Play Message node
+>
+> Connect the New Phone Contact node to this Business Hours node
 >
 > Connect the Working Hours node edge to the Play Message node
 >

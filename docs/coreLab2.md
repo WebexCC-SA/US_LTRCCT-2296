@@ -47,7 +47,7 @@ In this section of the lab we will continue building and testing together.  We w
 ---
 
 ### Add a Play Message node
-> Connect the True node edge of the previous Condition node to this Play Message node
+> Connect the False node edge of the previous Condition node to this Play Message node
 >
 > Enable Text-To-Speech
 >
@@ -65,7 +65,7 @@ In this section of the lab we will continue building and testing together.  We w
 ---
 
 ### Copy the Previous a Play Message node
-> Connect the False node edge of the previous Condition node to this Play Message node
+> Connect the True node edge of the previous Condition node to this Play Message node
 >
 > Edit the Text-to-Speech Message: <copy>Comfort Message 2.</copy>
 >

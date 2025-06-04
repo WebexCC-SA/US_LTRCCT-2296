@@ -71,9 +71,9 @@ In this section of the lab we will continue building and testing together.  We w
 >
 > Delete the connection between the play welcome message node and the Queue Contact node
 >
-> Connect the play welcome message node edge to this Condition node
+> Connect the play welcome message output node edge to this Condition node
 >
-> Connect the False node edge to the play welcome message node
+> Connect the False node edge to the Queue Contact node
 >
 ---
 
@@ -117,7 +117,7 @@ In this section of the lab we will continue building and testing together.  We w
 ---
 
 ### Add a Condition node
-> Activity Label: CBchoice
+> Activity Label: <copy>CBchoice</copy>
 >
 > Expression: <copy>`{{cbChoice}}`</copy>
 >

@@ -5,6 +5,7 @@
 In this section of the lab we will continue building and testing together.  We will create a new Business Hours Override which we will use to create a special treatment on the second Tuesday of every month of the summer.
 
 ## New Elements
+- Overrides
 
 
 ## Create and Update Configuration Items
@@ -68,7 +69,7 @@ In this section of the lab we will continue building and testing together.  We w
 >
 > Text-to-Speech Message: <copy>Happy second Tuesday of the month!  We are closing our office early every second Tuesday of the month over the summer so that our team can spend time with their families.  Please call back tomorrow. </copy>
 >
-> Delete the Override node edge connector between BusinessHours saf ClosedMessage
+> Delete the Override node edge connector between BusinessHours and ClosedMessage
 >
 > Connect the Override node edge connector to this node
 >
@@ -91,20 +92,6 @@ In this section of the lab we will continue building and testing together.  We w
 > Add Version Label(s): Live 
 >
 > Click Publish Flow
-
----
-
-
-### Map your flow to your inbound channel
-> Navigate to Control Hub > Contact Center > Channels
->
-> Locate your Inbound Channel (you can use the search): <copy><w class="EP"></w></copy>
->
-> Select the Routing Flow: <copy>CL<w class="POD"></w>_LARwCSAT</copy>
->
-> Select the Version Label: Live
->
-> Click Save in the lower right corner of the screen
 
 ---
 
