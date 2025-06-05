@@ -130,7 +130,7 @@
 ---
 
 
-### Map your flow to your inbound channel
+### Map your flow to your inbound channel (if it is not already mapped from a previous lab)
 > Navigate to Control Hub > Contact Center > Channels
 >
 > Locate your Inbound Channel (you can use the search): <copy><w class="EP"></w></copy>
@@ -143,14 +143,22 @@
 
 ---
 
+### If your Business Hours are still in the lunch portion of the day, adjust the lunch and Open PM Shifts to allow Open PM to be active
 
+---
 
 ## Testing
 1. Launch the [Agent Desktop](https://desktop.wxcc-us1.cisco.com/) and log in using the Desktop option.
+      1. Make sure you are logged into <w class="Team"><w>
+      2. On your Agent Desktop, make sure your status is not set to available
 2. Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy>
-3. 
-
-
+      1. If you previously completed the Multiple Lines of Business Using the Same Flow lab, Press option 1 for Sales.
+      2. You should be offered the option to receive a callback after the second loop of the hold music and second comfort message.
+         1. Do not make a selection
+      3. After the fourth loop of hold music and forth comfort message.
+         1. Press 1 to receive a callback
+3. In the Agent Desktop, set your status as Available
+      1. After accepting the call and connecting with the caller phone, end the call, Set your status as NOT Available, and wrap-up the call. 
 
 ---
 

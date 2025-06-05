@@ -215,13 +215,27 @@
 
 ---
 
+### If you are still in the lunch portion of the day, adjust the lunch and Open PM Shifts to allow Open PM to be active
 
+---
 
 ## Testing
 1. Launch the [Agent Desktop](https://desktop.wxcc-us1.cisco.com/) and log in using the Desktop option.
+      1. Make sure you are logged into <w class="Team2"><w>
+      2. On your Agent Desktop, make sure your status is not set to available
 2. Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy>
-3. 
-
+      1. Choose option 1 for Sales
+      2. If you have previously completed Offering a Callback option to calls actively waiting in the queue, do not elect for a callback
+         1. You should hear alternating music and Sales messages 
+            1. How many messages were there?
+         2. End the call
+3.  Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy>
+      1. Choose option 2 for Service
+      2. If you have previously completed Offering a Callback option to calls actively waiting in the queue, do not elect for a callback
+         1. You should hear alternating music and Service messages 
+            1. How many messages were there?
+         2. Set your Status to Available 
+         3. After the call is connected end the call, set your status as NOT Available, wrap-up the call, and log back into <w class="Team"><w>
 
 
 ---
