@@ -2,7 +2,7 @@
 
 ## Learning Objectives
 
-In this section of the lab we will continue building and testing together.  We will be enhancing the the wait treatment section of our floe to play alternating comfort messages every 30 seconds the caller is on hold and continue the hold music where it left off (instead of starting it over every 30 seconds).
+In this section of the lab we will continue building and testing together.  We will be enhancing the the wait treatment section of our flow to play alternating comfort messages every 30 seconds the caller is on hold and continue the hold music where it left off (instead of starting it over every 30 seconds).
 
 ## New Elements
  - Variables
