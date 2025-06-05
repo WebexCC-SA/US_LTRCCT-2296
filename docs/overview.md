@@ -40,14 +40,14 @@ In this lab we will be using Webex for making calls into the Contact Center and 
 
 > Log into Webex on your PC:
 >
-> - Username: <copy><w class="Admin username">Provided by proctor</w></copy>
+> - Username: <copy><w class="Admin">Provided by proctor</w></copy>
 > - Password: <copy><w class="PW">Provided by proctor</w></copy>
 > 
 
 ---
 > Log into [Webex Control Hub](https://admin.webex.com){:target="_blank"} in Chrome
 
-> Login: <copy><w class="Admin username">Provided by proctor</w></copy>
+> Login: <copy><w class="Admin">Provided by proctor</w></copy>
 > 
 > Password: <copy><w class="PW">Provided by proctor</w></copy>
 
@@ -55,7 +55,7 @@ In this lab we will be using Webex for making calls into the Contact Center and 
 ### Testing your lab setup
 > 1. Launch the [Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="_blank"} and log in selecting the Desktop option for your Voice connection.
 2. From the Webex App, dial <copy><w class="DN">Provided by proctor</w></copy>
-      1. You will hear a greeting message which will include the pod number which you have been assigned.
+      1. You will hear a greeting message which will include your name.
       2. The call will be place in your queue.
       3. You will hear the hold music until the call is answered
 3. In the agent desktop, set your status to Available and answer the call.
