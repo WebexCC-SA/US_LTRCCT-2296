@@ -10,18 +10,17 @@ The flow also includes an option to delete an audio file. **However, it is stron
 
 ##  High-Level Explanation
 
-1. A call enters the **Emergency Message Recording flow**.
-2. Initial nodes dynamically create an **audio file name** in the format: 
-     Emergency_<w class="POD"></w>
-3. The caller is presented with a **menu** that offers three options:
-     1. **Record a new emergency prompt**
-     2. **Update an existing emergency prompt**
-     3. **Delete an existing prompt** (Use with caution)
-4. Based on the selected option, the flow uses the **Webex Contact Center Audio File APIs** (via Connector) to:
-     1. **Record**: Allow the caller to record a new prompt.
-     2. **Update**: Replace the existing prompt with a new recording.
-     3. **Delete**: Remove the prompt (optional; not recommended during this lab).
-1. The newly recorded prompt is stored using the generated file name and can be used later in other flows for emergency call handling.
+- A call enters the **Emergency Message Recording flow**.
+- Initial nodes dynamically create an **audio file name** in the format: ```Emergency_<PodID>.wav```
+- The caller is presented with a **menu** that offers three options:
+1. **Record a new emergency prompt**
+2. **Update an existing emergency prompt**
+3. **Delete an existing prompt** (Use with caution)
+- Based on the selected option, the flow uses the **Webex Contact Center Audio File APIs** (via Connector) to:
+- **Record**: Allow the caller to record a new prompt.
+- **Update**: Replace the existing prompt with a new recording.
+- **Delete**: Remove the prompt (optional; not recommended during this lab).
+- The newly recorded prompt is stored using the generated file name and can be used later in other flows for emergency call handling.
 
 ---
 
@@ -29,7 +28,7 @@ The flow also includes an option to delete an audio file. **However, it is stron
 
 1. we will importing flow from  **Flow Template**.
 2. A **Connector** configured to call Webex Contact Center Audio File APIs (upload, update, delete).
-3. All the  **Local Variablese** required for the flow are pre confiugured and available when you import the template.
+3. All the  **Local Variables** required for the flow are pre configured and available when you import the template.
 
 ---
 
@@ -43,7 +42,7 @@ The flow also includes an option to delete an audio file. **However, it is stron
   - Rename the  flow  <copy>CL<w class="POD"></w>_emeraudio</copy>
 - Click **Create Flow** and confirm that the flow loads in the Flow Canvas
 
-### <details><summary>CreatefromTemplate</summary>![](./assets/EA_CreateFlow.gif)</details>
+### <details><summary>CreatefromTemplate</summary>![](assets/EA_CreateFlow.gif)</details>
 
 
 ### Add a Play Message node
@@ -112,7 +111,7 @@ The flow also includes an option to delete an audio file. **However, it is stron
 
 ---
 
-### <details><summary>CheckyourFlow</summary>![checkyourFlow](./assets/EA_Flowwith4nodes.jpg)</details>
+### <details><summary>CheckyourFlow</summary>![checkyourFlow](assets/EA_Flowwith4nodes.jpg)</details>
 
 ---
 ## Publish Your Flow
@@ -123,7 +122,7 @@ The flow also includes an option to delete an audio file. **However, it is stron
   - Add a **Version Label**: `Live`
   - Click **Publish Flow**
 
-  ![Publish Your Flow Demo](Gifs/1.6.gif)
+  ![Publish Your Flow Demo](assets/1.6.gif)
 
 ---
 
@@ -133,7 +132,7 @@ The flow also includes an option to delete an audio file. **However, it is stron
 
 1. Navigate to **Control Hub > Contact Center > Channels**
 2. Locate your **Inbound Channel** (use the search bar)
-3. Select the **Routing Flow**: <copy>CL<w class="POD"></w>_emeraudio</copy>
+3. Select the **Routing Flow**: `CL_core`
 4. Select the **Version Label**: `Live`
 5. Click **Save** (bottom-right corner)
 
@@ -142,14 +141,12 @@ The flow also includes an option to delete an audio file. **However, it is stron
 
 ##  Testing the Flow
 
-1. Call into the flow. You will be greeted and asked to enter your **Pod ID**.
-2. Upon entering the Pod ID, a variable will be dynamically created in the format: Emergency_<w class="POD"></w>.wav```
-3. A menu will then be offered with the following options:
-> **1** to create a new prompt
-> 
-> **2** to update an existing prompt
-> 
-> **3** to delete an existing prompt (⚠️ **please do not perform this option during the lab**)
+- Call into the flow. You will be greeted and asked to enter your **Pod ID**.
+- Upon entering the Pod ID, a variable will be dynamically created in the format: ```Emergency_<PodID>.wav```
+- A menu will then be offered with the following options:
+- **1** to create a new prompt
+- **2** to update an existing prompt
+- **3** to delete an existing prompt (⚠️ **please do not perform this option during the lab**)
 
 ###  To create a new prompt:
 1. Select **Option 1** from the menu.

@@ -20,33 +20,20 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 
 ##  Preconfigured Elements
 
-1. **Connector**:
+1. **Global Variable**:
+   - Please reach out to Proctor to get a Boolean global variable named emergencyFlag_<w class="POD"></w> 
+   - Proctor will also give you Global Variable ID 
+   - This variable holds the current Emergency status (true/false).
+
+2. **Connector**:
    - A connector is available in the flow to call **Webex Contact Center APIs**.
    - It is used to **read and update** the Emergency flag via API.
 
-2. **Supervisor Password**:
+3. **Supervisor Password**:
    - The password required for authentication is: `9638`.
 
 
-
-### Create below Global  Flow Variables
-
-> Navigate to ControlHub>Contact Center>Flows>Global Variables>create a gloabal Variable
-
-> Name: <copy>CL<w class="POD"></w>_Emergency</copy> 
->
-> Variable type: Boolean
->
-> Default Value:```False```
->
-> Copy the ID — it will be used as the default value of ```Global_ID``` Flow Variable
-
-### <details><summary>GlobalVariable_ID</summary>![](./assets/GV_ID.jpg)</details>
-
-### Create a new flow
-> Create a new flow named <copy>CL<w class="POD"></w>_emer</copy>
-
-### Create these Local Flow Variables
+### Create these Flow Variables
 > Name: <copy>HTTPStatusVar</copy>
 >
 > Type: String
@@ -58,30 +45,28 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 > Type: String
 >
 > Default Value: Leave Empty
-
 ---
-> Name: <copy>Global_ID</copy>
+> Name: <copy>Emergency_Value_Check</copy>
 >
 > Type: String
 >
-> Default Value: < ID copied from Global Variable>
+> Default Value: Leave Empty
+---
+> Name: <copy>Gloabal_ID</copy>
+>
+> Type: String
+>
+> Default Value: <Variable ID you get from the proctor>
 ---
 > Name: <copy>Global_Name</copy>
 >
 > Type: String
 >
-> Default Value: <copy>CL<w class="POD"></w>_Emergency</copy> 
+> Default Value: < Variable you get from the proctor>
 ---
 
-### Tag  Global  Variables in the flow 
-
-> Under Global variable 
->
-> Click ```Add Global Variables```
->
-> Search with your Pod id <copy><w class="POD"></w></copy> 
->
-> Select and Add the Global Variable 
+### Create a new flow
+> Create a new flow named <copy>CL<w class="POD"></w>_emer</copy>
 
 ---
 ### Add a Collect Digits node
@@ -117,13 +102,18 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 
 > Under Connector Select ```Wxcc_API``` 
 
-> Request Path: <copy>`/organization/e56f00d4-98d8-4b62-a165-d05a41243d98/cad-variable/{{Gloabal_ID}}`</copy>
+> Request Path: <copy>`/organization/e56f00d4-98d8-4b62-a165-d05a41243d98/cad-variable/{{Global_ID}}`</copy>
 
+> Example ```/organization/e56f00d4-98d8-4b62-a165-d05a41243d98/cad-variable/{{Global_ID}}``` 
+
+>The ID can be found in Flows>Global Variables>Select `emergencyFlag_<YourPodID>` and copy the ```ID``` , Lab Proctor will give this ID 
+
+### <details><summary>GlobalVariable_ID</summary>![](assets/GV_ID.jpg)</details>
 
 
 > Under Connector Select ```GET``` 
 >
-> Under Connector Select ```Appliation/JSON``` 
+> Under Connector Select ```Application/JSON``` 
 >
 
 > ParseSetting 
@@ -187,7 +177,7 @@ Click Add New
 >
 ---
 
-### <details><summary>CheckyourFlow</summary>![checkyourFlow](./assets/EmergencyFlow.jpg)</details>
+### <details><summary>CheckyourFlow</summary>![checkyourFlow](assets/EmergencyFlow.jpg)</details>
 
 ## Publish Your Flow
 
@@ -197,8 +187,7 @@ Click Add New
   - Add a **Version Label**: `Live`
   - Click **Publish Flow**
 
-  
-### <details><summary>CheckyourFlow</summary>![Publish Your Flow Demo](Gifs/1.6.gif)</details>
+  ![Publish Your Flow Demo](assets/1.6.gif)
 
 ---
 
@@ -206,7 +195,7 @@ Click Add New
 
 1. Navigate to **Control Hub > Contact Center > Channels**
 2. Locate your **Inbound Channel** (use the search bar)
-3. Select the **Routing Flow**: <copy>CL<w class="POD"></w>_emer</copy>
+3. Select the **Routing Flow**: `CL_core`
 4. Select the **Version Label**: `Live`
 5. Click **Save** (bottom-right corner)
 
@@ -215,17 +204,14 @@ Click Add New
 ## Testing the Emergency Control Flow
 
 1. Call into the **Emergency Control Script** using your assigned **Inbound Channel Number**
-2. When prompted, enter the **Supervisor/Administrator Pin**: `9638`
+2. When prompted, enter the **Supervisor/Administrator password**: `9638`
 3. You will hear the **current status** of the Emergency flag (e.g., *Emergency mode is OFF*)
 4. Press **1** to enable Emergency mode
-5. Open the **Webex Contact Center Developer Portal** and **verify that the global variable value is now set to `true`** 
-### <details><summary>CheckyourFlow</summary>![Publish Your Flow Demo](Gifs/Developportal.gif)</details>
-
-6. Call the script again and **enter the Pin `9638`**
-7. This time, **press 1 again to disable Emergency mode**
+5. Open the **Webex Contact Center Developer Portal** and **verify that the global variable value is now set to `true`**
+6. Call the script again and **enter the password `9638`**
+7. This time, **press 2 to disable Emergency mode**
 8. Return to the **Developer Portal** and verify that the **Emergency flag is now set to `false`**
-   
-### <details><summary>CheckyourFlow</summary>![Publish Your Flow Demo](Gifs/Developportal.gif)</details>
+
 ---
 
 ## Debugging the Flow
