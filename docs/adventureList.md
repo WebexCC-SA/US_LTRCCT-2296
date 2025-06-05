@@ -6,7 +6,7 @@ In this section of the lab you are going to choose your own adventure from the l
 ## Stories
 
 ### [Dial-A-Dad-Joke](dadJoke.md)
-> Not every learning exercise needs to be overly serious.  This exercise is a fun way to explore the basics of and http request, JSON, text-to-speech, and basic flow logic, all while getting a little giggle.
+> Not every learning exercise needs to be overly serious.  This exercise is a fun way to explore the basics of an http request, JSON, text-to-speech, and basic flow logic, all while getting a little giggle.
 
 
 ### [Offering a Callback option to calls actively waiting in the queue](callback.md)

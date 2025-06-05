@@ -58,7 +58,7 @@
     ### Edit the Callback node settings
     > Open the Callback node
     >
-    > Find teh Register callback to different location switch and turn it off
+    > Find the Register callback to different location switch and turn it off
     >
     ---
 

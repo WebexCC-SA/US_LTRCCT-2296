@@ -157,6 +157,13 @@
     > Connect the False node edge of the Condition node to the Play Music node
     ---
 
+    ### Edit the Callback node settings
+    > Open the Callback node
+    >
+    > Find the Register callback to different location switch and turn it off
+    >
+    ---
+
     ### <details><summary>Check your flow</summary>![](./assets/multiWithCBpart2.png)</details>
 
 ??? Note "If you have NOT completed Offering a Callback option to calls actively waiting in the queue"
