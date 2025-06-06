@@ -1,42 +1,37 @@
-# Dynamically Controlling Emergency Flag in Webex Contact Center Using API
+#  Lab: Dynamically Controlling Emergency Flag in Webex Contact Center Using API
 
-## Story
+## Storyline
 
 In this lab, you will learn how to **dynamically change the Emergency flag** in a Webex Contact Center (WxCC) environment by calling a script as a **Supervisor or Administrator**. This enables real-time routing behavior adjustments — such as diverting calls to a special queue or playing emergency announcements — during critical situations like outages or weather alerts.
 
 ---
 
-### High-Level Explanation
+##  High-Level Explanation
 
-> A call enters the **IVR flow**.
-> 
-> The **caller is prompted to enter a Supervisor/Administrator password**.
-> 
-> If the password is correct:
-  >> The **current status** of the Emergency flag is **retrieved and played back** (e.g., *Emergency flag is currently ON/OFF*).
-
-  >> The caller is then **offered an option to change the Emergency status**.
-
-> Based on the caller's choice, the script **invokes a WxCC API** (via connector) to **update the Global Variable** controlling Emergency Flag.
-> 
-> This flag controls downstream behavior in the flow (e.g., route to emergency queue or play special message).
+- A call enters the **IVR flow**.
+- The **caller is prompted to enter a Supervisor/Administrator password**.
+- If the password is correct:
+  - The **current status** of the Emergency flag is **retrieved and played back** (e.g., *Emergency flag is currently ON/OFF*).
+  - The caller is then **offered an option to change the Emergency status**.
+- Based on the caller's choice, the script **invokes a WxCC API** (via connector) to **update the Global Variable** controlling Emergency Flag.
+- This flag controls downstream behavior in the flow (e.g., route to emergency queue or play special message).
 
 ---
 
-## Preconfigured Elements
+##  Preconfigured Elements
 
 1. **Connector**:
-   > A connector is available in the flow to call **Webex Contact Center APIs**.
-  >> It is used to **read and update** the Emergency flag via API.
+   - A connector is available in the flow to call **Webex Contact Center APIs**.
+   - It is used to **read and update** the Emergency flag via API.
 
 2. **Supervisor Password**:
-   > The password required for authentication is: `9638`.
+   - The password required for authentication is: `9638`.
 
 
 
 ### Create below Global  Flow Variables
 
-> Navigate to ControlHub > Contact Center > Flows > Global Variables > Create a Global Variable
+> Navigate to ControlHub>Contact Center>Flows>Global Variables>create a gloabal Variable
 
 > Name: <copy>CL<w class="POD"></w>_Emergency</copy> 
 >
@@ -44,9 +39,9 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 >
 > Default Value:```False```
 >
-> Copy the ID  (it will be used as the default value of ```Global_ID``` Flow Variable)
+> Copy the ID — it will be used as the default value of ```Global_ID``` Flow Variable
 
-### <details><summary>Show Me</summary>![](./assets/GV_ID.jpg)</details>
+### <details><summary>GlobalVariable_ID</summary>![](./assets/GV_ID.jpg)</details>
 
 ### Create a new flow
 > Create a new flow named <copy>CL<w class="POD"></w>_emer</copy>
@@ -122,21 +117,20 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 
 > Under Connector Select ```Wxcc_API``` 
 
-> Request Path: <copy>`/organization/e56f00d4-98d8-4b62-a165-d05a41243d98/cad-variable/{{Global_ID}}`</copy>
+> Request Path: <copy>`/organization/e56f00d4-98d8-4b62-a165-d05a41243d98/cad-variable/{{Gloabal_ID}}`</copy>
+
+
 
 > Under Connector Select ```GET``` 
 >
-> Under Connector Select ```Application/JSON``` 
+> Under Connector Select ```Appliation/JSON``` 
 >
 
 > ParseSetting 
 
 >  Content Type -- ```JSON``` 
-> 
 >  OutPutVariable -- ```Emergency_Value_Check```
-> 
 > Path Expression -- ```$.defaultValue``` 
-> 
 
 ---
 ### Add a Play Message node
@@ -179,7 +173,7 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 >>
 >> Subflow Input Variable: <copy>GV_Name</copy>
 
-> Click Add New
+Click Add New
 >>
 >> Current Flow Variable: <copy>Emergency_Value_Check</copy>
 >>
@@ -189,37 +183,32 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 ---
 
 ### Add a Disconnect Contact node
-> Connect the Output node edge from the Subflow and play message node to this Disconnect Contact node
+> Connect the Output node edge from the Subflow  and play message node to this Disconnect Contact node
 >
 ---
 
-### <details><summary>Check your flow</summary>![Check Your Flow](./assets/EmergencyFlow.jpg)</details>
+### <details><summary>CheckyourFlow</summary>![checkyourFlow](./assets/EmergencyFlow.jpg)</details>
+
+## Publish Your Flow
+
+- Turn on **Validation** at the bottom right corner of the Flow Builder
+- If there are no Flow Errors, click **Publish**
+  - Add a **Publish Note**
+  - Add a **Version Label**: `Live`
+  - Click **Publish Flow**
+
+  
+### <details><summary>CheckyourFlow</summary>![Publish Your Flow Demo](Gifs/1.6.gif)</details>
 
 ---
-### Publish your flow
-> Turn on Validation at the bottom right corner of the flow builder
->
-> If there are no Flow Errors, Click Publish
->
-> Add a publish note
->
-> Add Version Label(s): Live 
->
-> Click Publish Flow
 
----
+## Map Your Flow to Your Inbound Channel
 
-
-### Map your flow to your inbound channel
-> Navigate to Control Hub > Contact Center > Channels
->
-> Locate your Inbound Channel (you can use the search): <copy><w class="EP"></w></copy>
->
-> Select the Routing Flow: <copy>CL<w class="POD"></w>_emer</copy>
->
-> Select the Version Label: Live
->
-> Click Save in the lower right corner of the scree
+1. Navigate to **Control Hub > Contact Center > Channels**
+2. Locate your **Inbound Channel** (use the search bar)
+3. Select the **Routing Flow**: <copy>CL<w class="POD"></w>_emer</copy>
+4. Select the **Version Label**: `Live`
+5. Click **Save** (bottom-right corner)
 
 ---
 
@@ -230,21 +219,18 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 3. You will hear the **current status** of the Emergency flag (e.g., *Emergency mode is OFF*)
 4. Press **1** to enable Emergency mode
 5. Open the **Webex Contact Center Developer Portal** and **verify that the global variable value is now set to `true`** 
-    <details><summary>Show Me</summary>![](./assets/Developportal.gif)</details>
+### <details><summary>CheckyourFlow</summary>![Publish Your Flow Demo](Gifs/Developportal.gif)</details>
+
 6. Call the script again and **enter the Pin `9638`**
 7. This time, **press 1 again to disable Emergency mode**
 8. Return to the **Developer Portal** and verify that the **Emergency flag is now set to `false`**
-    <details><summary>Show Me</summary>![](./assets/Developportal.gif)</details>
-
+   
+### <details><summary>CheckyourFlow</summary>![Publish Your Flow Demo](Gifs/Developportal.gif)</details>
 ---
 
 ## Debugging the Flow
 
-> Open the **Debugger** in the Flow Builder
-> Select the **last interaction** from the top of the list
-> Trace the call steps
-  >> You can view the **path**, **input/output variables**, and **events**
-
----
-
-# Once you have completed the testing, go pick another adventure from the [Adventure Section](adventureList.md)
+- Open the **Debugger** in the Flow Builder
+- Select the **last interaction** from the top of the list
+- Trace the call steps
+  - You can view the **path**, **input/output variables**, and **events**
