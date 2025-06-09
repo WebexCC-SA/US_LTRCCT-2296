@@ -98,7 +98,7 @@
 >
 > Text-to-Speech Message: <copy>Welcome to Cisco Live, Let's set the name of the Emergency file, before we play with updating the same.</copy>
 >
->> Delete the existing path from  New Contact node and connect it  to the play welcome message node
+>> Delete the existing path from  New Contact node and connect it  to the play message node
 
 ---
 ### Add a Collect Digits node
@@ -135,7 +135,7 @@
 
 ### Add an another Set Variable node
 
-> Connect the Set Variable Node   edge to Set Variable node
+> Connect the Set Variable Node   edge to this Set Variable node
 
 > Activity Label: <copy>Set_updatedFile</copy>
 
@@ -145,6 +145,7 @@
 >
 > and select preconfigured ```audioFileName``` from the drop down
 >
+>> Connect the this Set Variable Node to Menu Node
 
 ---
 

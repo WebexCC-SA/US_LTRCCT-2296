@@ -10,7 +10,7 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 
 > A call enters the **IVR flow**.
 > 
-> The **caller is prompted to enter a Supervisor/Administrator password**.
+> The **caller is prompted to enter a Supervisor/Administrator pin**.
 > 
 > If the password is correct:
   >> The **current status** of the Emergency flag is **retrieved and played back** (e.g., *Emergency flag is currently ON/OFF*).
@@ -29,7 +29,7 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
    > A connector is available in the flow to call **Webex Contact Center APIs**.
   >> It is used to **read and update** the Emergency flag via API.
 
-2. **Supervisor Password**:
+2. **Supervisor PIN**:
    > The password required for authentication is: `9638`.
 
 
@@ -113,7 +113,7 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 >
 > Connect the True node edge to the HTTP Request node, in the next step you will learn HTTP Configuration
 >
-> Connect the False node edge to the play welcome message node
+> Link the Collect Digit Node to Conditon Node 
 >
 ---
 
@@ -136,11 +136,12 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 >  OutPutVariable -- ```Emergency_Value_Check```
 > 
 > Path Expression -- ```$.defaultValue``` 
-> 
+>
+> Link the True path from the condition node to HTTP node 
 
 ---
-### Add a Play Message node
-> Connect the False node edge to the play welcome message node
+### Add a Play  node
+> Connect the False node edge of condition node to the play  message node
 >
 > Activity Label: <copy>SomethingwentWrongMsg</copy>
 >
