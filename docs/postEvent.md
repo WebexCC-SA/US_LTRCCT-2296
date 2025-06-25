@@ -29,9 +29,9 @@ button:hover{
 ### Subflows
 > Use the links below to download the subflows which will be referenced in the labs, then import and publish them.  If you need guidance, click on the Show Me section.
 >
-> <a href="/assets/WaitTreatment.json" download>Wait Treatment</a>
+> <a href="assets/WaitTreatment.json" download>Wait Treatment</a>
 >
-> <a href="/assets/LTRCCT2296Callback.json" download>Callback</a>
+> <a href="assets/LTRCCT2296Callback.json" download>Callback</a>
 >
 > ??? Note "Show Me"    
     ![](./assets/importSubflow.gif)
@@ -41,7 +41,7 @@ button:hover{
 ### Functions
 > Use the link below to download the Function which will be referenced in the labs, then import and publish it.  If you need guidance, click on the Show Me section.
 >
-> <a href="/assets/LOBwaitMessages.json" download>LOB Messages</a>
+> <a href="assets/LOBwaitMessages.json" download>LOB Messages</a>
 >
 > ??? Note "Show Me"    
     ![](./assets/importFunction.gif)
