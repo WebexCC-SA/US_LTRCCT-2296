@@ -99,8 +99,10 @@ nav:
   - Home: index.md
   # - Test1234: test1234.md
   - Getting Started:
-      - Welcome: welcome.md
-      - Overview: overview.md
+    - Welcome: postEvent.md
+    - Overview: peOverview.md
+    # - Welcome: welcome.md
+    # - Overview: overview.md
   - Core:
       - Lab 1: coreLab1.md
       - Lab 2: coreLab2.md
@@ -109,48 +111,7 @@ nav:
       - Lab 5: coreLab5.md
       - Understanding JSON: json.md
   - Adventure Section: adventureList.md
-      # - Lab Overview: ./main/overview.md
-      # - Getting to know your environment: ./main/PreRequisites.md
-      # - Chrome and Webex App Setup: ./main/Browser_and_Desktop_Setup.md 
-      # - Choose Your Adventure: ./main/Choose_Your_Adventure.md
-      ## - Flow Designer Overview [To be moved to presentation]: ./main/FlowDesignerOverview.md
-  # - CORE TRACK:
-  #     - Lab Guide:
-  #           - "Mission 1: Basic Call Routing (Flow Template, TTS, Language)": ./main/CoreTrack_Mission1.md
-  #           - "Mission 2: Using Business Hours to add flexibility": ./main/CoreTrack_Mission2.md
-  #           - "Mission 3: Work with Event Flow": ./main/CoreTrack_Mission4.md
-  #           - "Mission 4: Post Call Survey": ./main/CoreTrack_Mission5.md
-  #           - "Mission 5: Using Flow Designer Tools": ./main/CoreTrack_Mission6.md
-  #     - Conclusion: ./main/CoreTrack_Conclusion.md
-  # - API TRACK:
-  #     - Lab Guide:
-  #           ##- "Advacned Call Routing and Flow Simplification by using API Integration Overview": ./main/Lab2.md
-  #           - "Introduction to Developer Portal": ./main/APITrack_DeveloperPortal.md
-  #           - "Mission 1: Emergency config change": ./main/APITrack_Mission1.md
-  #           - "Mission 2: Routing facilitation": ./main/APITrack_Mission2.md 
-  #           - "Mission 3: Last Agent Routing": ./main/APITrack_Mission3_AutoCSAT.md
-  #           - "Mission 4: Routing Returning Callers": ./main/APITrack_Mission4.md
-  #     - Conclusion: ./main/APITrack_Conclusion.md
-  # - CALLBACK TRACK:
-  #     - Lab Guide:
-  #           - "Mission 1: Basic Call Routing (Flow Template, TTS, Language)": ./main/CallbackTrack_Mission1.md ## Same as CoreTrack Mission1
-  #           - "Mission 2: Adding Call-back functionality to your flow": ./main/CallbackTrack_Mission2.md ## Same as CoreTrack Mission3
-  #           - "Mission 3: CallBack on Global Error": ./main/CallbackTrack_Mission3.md
-  #           - "Mission 4: Preventing Callback duplication": ./main/CallbackTrack_Mission4.md
-  #     - Conclusion: ./main/CallbackTrack_Conclusion.md
-  # - AI AGENT TRACK:
-  #     - Lab Guide:
-  #           - "Mission 1: AI in Action (Autonomous Agent)": ./main/AIAgentTrack_Mission1.md
-  #           - "Mission 2: AI in Action (Scripted Agent)": ./main/AIAgentTrack_Mission2.md
-  #           - "Mission 3: Seamless AI to Human Agent Handoffs": ./main/AIAgentTrack_Mission3.md
-##      - Conclusion: ./main/AIAgentTrack_Conclusion.md
-##  - FINAL CHALLENGE:
-##      - Troubleshooting Mission:
-##            - "Final Challenge: Production flow is failing!": ./main/FinalBossFight_Mission.md
-##            - "Hint for Final Challenge Mission!": ./main/FinalBossFight_Hint1.md
-##            - "Solution Guidance for Final Challenge Fight Mission!": ./main/FinalBossFight_Solution.md
   - Cheat Sheet: cheatsheet.md
-  - Login Info: creds.md
-  # - Quick Links: quicklinks.md
-  - Ask a Question<i class="fa-solid fa-hand" style="color:#63E6BE;"></i>: slido-QA-iFrame.md
+  # - Login Info: creds.md
+  # - Ask a Question<i class="fa-solid fa-hand" style="color:#63E6BE;"></i>: slido-QA-iFrame.md
 
