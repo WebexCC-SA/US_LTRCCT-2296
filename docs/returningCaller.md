@@ -22,7 +22,7 @@
 
 ### Create an new flow
 
-> Create a flow named <copy>CL<w class ="POD">yourLabID</w>_ReturningCaller</copy>
+> Create a flow named <copy>CL<w class ="POD"></w>_ReturningCaller</copy>
 
 ---
 

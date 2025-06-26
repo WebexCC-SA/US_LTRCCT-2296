@@ -39,6 +39,9 @@ theme:
   favicon: template_assets/cisco_logo.png
 extra:
   generator: false
+  analytics:
+    provider: google
+    property: G-EWYZYS1K7E
 extra_css:
   - stylesheets/extra.css
 extra_javascript:

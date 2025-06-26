@@ -263,7 +263,7 @@ query PIQlist(
 >
 > ---
 >
-> Variable: <copy>position</copy> 
+> Variable: <copy>existingCallback</copy> 
 >
 > Set Variable: True
 ---

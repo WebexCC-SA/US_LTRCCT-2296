@@ -113,7 +113,7 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 >
 > Connect the True node edge to the HTTP Request node, in the next step you will learn HTTP Configuration
 >
-> Link the Collect Digit Node to Conditon Node 
+> Link the Collect Digit Node to Condition Node 
 >
 ---
 
@@ -122,7 +122,7 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 
 > Under Connector Select ```Wxcc_API``` 
 
-> Request Path: <copy>`/organization/e56f00d4-98d8-4b62-a165-d05a41243d98/cad-variable/{{Global_ID}}`</copy>
+> Request Path: <copy>`/organization/{{NewPhoneContact.OrgId}}/cad-variable/{{Global_ID}}`</copy>
 
 > Under Connector Select ```GET``` 
 >
@@ -161,7 +161,7 @@ In this lab, you will learn how to **dynamically change the Emergency flag** in 
 ### Add a Subflow node
 > Name: Emergency_Flag_OnOff
 >
-> Connect the HTTP_GET node  to this Subflow node
+> Connect the HTTP_GET node to this Subflow node
 >
 > Subflow Label: Live
 >

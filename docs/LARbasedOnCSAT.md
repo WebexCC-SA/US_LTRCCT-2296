@@ -23,7 +23,7 @@
 ## Build
 ### Create an new flow
 
-> Create a flow named <copy>CL<w class="POD">yourLabID</w>_LARwCSAT</copy>
+> Create a flow named <copy>CL<w class="POD"></w>_LARwCSAT</copy>
 
 ### Create these flow variables
 

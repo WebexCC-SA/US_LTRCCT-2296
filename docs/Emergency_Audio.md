@@ -209,15 +209,8 @@
 > Sort the list by **Date Created** and verify that a new prompt has been created.
 >
 > You can **download and play** the prompt to confirm the recording.
-> Select **Option 1** from the menu.
 >
-> Record the prompt after the beep, then press **#** to finish.
->
-> Go to **Control Hub → Contact Center → Audio Files**.
->
-> Sort the list by **Date Created** and verify that a new prompt has been created.
->
-> You can **download and play** the prompt to confirm the recording.
+
 
 ###  To update an existing prompt:
 > Select **Option 2** from the menu.
@@ -229,15 +222,7 @@
 > Sort the list by **Date Modified** and verify that the prompt has been updated.
 >
 > Download and play it to confirm the new message is applied.
-> Select **Option 2** from the menu.
->
-> Record the new message after the beep, then press **#** to finish.
->
-> Go to **Control Hub → Contact Center → Audio Files**.
->
-> Sort the list by **Date Modified** and verify that the prompt has been updated.
->
-> Download and play it to confirm the new message is applied.
+> 
 
 ---
 

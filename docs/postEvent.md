@@ -48,7 +48,15 @@ button:hover{
 
 ---
 
-
+## Ensure that you have a Webex Contact Center connector configured
+> Navigate to Integrations in the left pane of Control Hub
+>
+> Ensure that the connector Access selection is set to Read-Write Access
+>
+> If you do not have a connector configured, add one by clicking on Set Up
+>
+> ??? Note "Show Me"    
+    ![](./assets/checkConnector.gif)
 
 ## Create Configuration Items 
 Create the following configuration items and/or update the form below with the appropriate values, then click the "Update Lab Guide" button.
