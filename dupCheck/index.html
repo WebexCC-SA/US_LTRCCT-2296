@@ -1,0 +1,1238 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer">
+      
+      
+        <meta name="author" content="Kevin Simpson, Chandramouli Vaithiyanathan">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../template_assets/cisco_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Stopping Duplicate Callback Requests - LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-EWYZYS1K7E"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-EWYZYS1K7E",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-EWYZYS1K7E",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stopping-duplicate-callback-requests" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" class="md-header__button md-logo" aria-label="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" data-md-component="logo">
+      
+  <img src="../template_assets/cisco_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stopping Duplicate Callback Requests
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../postEvent/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../coreLab1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Core
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../adventureList/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Adventure Section
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cheatsheet/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Cheat Sheet
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" class="md-nav__button md-logo" aria-label="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" data-md-component="logo">
+      
+  <img src="../template_assets/cisco_logo.png" alt="logo">
+
+    </a>
+    LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postEvent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peOverview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding JSON
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventureList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adventure Section
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="stopping-duplicate-callback-requests">Stopping Duplicate Callback Requests</h1>
+<h2 id="story">Story</h2>
+<blockquote>
+<p>When you have unexpectedly long wait times it is not uncommon for customers to call back in and create multiple callback requests.  In this lab we will identify callers which already have a callback in queue and we will let the caller hear their current position in the queue, so that they know when they can expect to receive a callback.</p>
+</blockquote>
+<h3 id="high-level-explanation">High Level Explanation</h3>
+<ol>
+<li>We will create a Subflow which will make up to two API calls.<ol>
+<li>The first call will check to see if there is an existing callback in queue for the callers phone number</li>
+<li>If there is a call in the queue already, the second API call will retrieve a list of calls then we will see where in line the call is and tell the caller.</li>
+</ol>
+</li>
+<li>We will also create a special Flow just for testing. </li>
+</ol>
+<hr />
+<h2 id="preconfigured-elements">Preconfigured Elements</h2>
+<ol>
+<li>Connector for calling Webex Contact Center APIs</li>
+</ol>
+<hr />
+<h2 id="build">Build</h2>
+<h3 id="create-a-new-subflow">Create a new Subflow</h3>
+<blockquote>
+<p>Name: <copy>CL<w class="POD"></w>_DupCheck</copy></p>
+</blockquote>
+<hr />
+<h3 id="create-these-subflow-variables">Create these Subflow Variables</h3>
+<blockquote>
+<p>Name: <copy>TaskID</copy></p>
+<p>Variable Type: <copy>String</copy></p>
+<p>Input: false</p>
+<p>Output: false</p>
+<p>Default Value: empty
+</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>Name: <copy>queueID</copy></p>
+<p>Variable Type: <copy>String</copy></p>
+<p>Input: false</p>
+<p>Output: false</p>
+<p>Default Value: empty
+</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>Name: <copy>status</copy></p>
+<p>Variable Type: <copy>String</copy></p>
+<p>Input: false</p>
+<p>Output: false</p>
+<p>Default Value: empty
+</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>Name: <copy>existingCallback</copy></p>
+<p>Variable Type: <copy>Boolean</copy></p>
+<p>Input: False</p>
+<p>Output: True</p>
+<p>Default Value: False
+</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>Name: <copy>list</copy></p>
+<p>Variable Type: <copy>String</copy></p>
+<p>Input: false</p>
+<p>Output: false</p>
+<p>Default Value: empty
+</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>Name: <copy>position</copy></p>
+<p>Variable Type: <copy>Integer</copy></p>
+<p>Input: false</p>
+<p>Output: false</p>
+<p>Default Value: <copy>0</copy>
+</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>Name: <copy>ANI</copy></p>
+<p>Variable Type: <copy>String</copy></p>
+<p>Input: true</p>
+<p>Output: false</p>
+<p>Default Value: empty
+</p>
+</blockquote>
+<hr />
+<h3 id="add-an-http-request-node">Add an HTTP Request node</h3>
+<blockquote>
+<p>Select Use Authenticated Endpoint</p>
+<p>Connector: <copy>WxCC_API</copy></p>
+<p>Path: <copy>/search</copy></p>
+<p>Method: <copy>POST</copy></p>
+<p>Content Type: <copy>GraphQL</copy></p>
+<p>Copy this GraphQL query into the request body:</p>
+<p><div class="language-GraphQL highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">query</span><span class="w"> </span><span class="nf">callbackCheck</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nv">$from</span><span class="p">:</span><span class="w"> </span><span class="nc">Long</span><span class="p">!</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nv">$to</span><span class="p">:</span><span class="w"> </span><span class="nc">Long</span><span class="p">!</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nv">$filter</span><span class="p">:</span><span class="w"> </span><span class="nc">TaskFilters</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nv">$timeComparator</span><span class="p">:</span><span class="w"> </span><span class="nc">QueryTimeType</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="n">task</span><span class="p">(</span><span class="n">from</span><span class="p">:</span><span class="w"> </span><span class="nv">$from</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="p">:</span><span class="w"> </span><span class="nv">$to</span><span class="p">,</span><span class="w"> </span><span class="n">filter</span><span class="p">:</span><span class="w"> </span><span class="nv">$filter</span><span class="p">,</span><span class="w"> </span><span class="n">timeComparator</span><span class="p">:</span><span class="w"> </span><span class="nv">$timeComparator</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">tasks</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="n">id</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="n">status</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="n">lastQueue</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">id</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
+</span></code></pre></div>
+Copy this into the Variables section:
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{now()|epoch (inMillis=true) -86400000 }}&quot;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{now()|epoch (inMillis=true)}}&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&quot;and&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">                </span><span class="nt">&quot;origin&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                    </span><span class="nt">&quot;equals&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{ANI}}&quot;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">                </span><span class="nt">&quot;isActive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">                    </span><span class="nt">&quot;equals&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                </span><span class="nt">&quot;isCallback&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                    </span><span class="nt">&quot;equals&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="p">]</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="nt">&quot;timeComparator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;createdTime&quot;</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>Parse Settings:</p>
+<p>Content Type: <copy>JSON</copy></p>
+<ul>
+<li>Output Variable: <copy>queueID</copy></li>
+<li>Path Expression: <copy>$.data.task.tasks[0].lastQueue.id</copy></li>
+</ul>
+<hr />
+<ul>
+<li>Output Variable: <copy>status</copy></li>
+<li>Path Expression: <copy>$.data.task.tasks[0].status</copy></li>
+</ul>
+<hr />
+<ul>
+<li>Output Variable: <copy>TaskID</copy></li>
+<li>Path Expression: <copy>$.data.task.tasks[0].id</copy></li>
+</ul>
+<hr />
+</blockquote>
+<h3 id="add-a-condition-node">Add a Condition node</h3>
+<blockquote>
+<p>Connect the output from the previous HTTP Request node to this node</p>
+<p>Expression: <copy>{{status == "parked" or status == "connect"}}</copy></p>
+<p>We will connect the False node in a future step.</p>
+<p>Connect the True node edge to the HTTP Request node created in the next step.
+</p>
+</blockquote>
+<hr />
+<h3 id="add-an-http-request-node_1">Add an HTTP Request node</h3>
+<blockquote>
+<p>Select Use Authenticated Endpoint</p>
+<p>Connector: <copy>WxCC_API</copy></p>
+<p>Path: <copy>/search</copy></p>
+<p>Method: <copy>POST</copy></p>
+<p>Content Type: <copy>GraphQL</copy></p>
+<p>Copy this GraphQL query into the request body:</p>
+<p><div class="language-GraphQL highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">query</span><span class="w"> </span><span class="nf">PIQlist</span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nv">$from</span><span class="p">:</span><span class="w"> </span><span class="nc">Long</span><span class="p">!</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nv">$to</span><span class="p">:</span><span class="w"> </span><span class="nc">Long</span><span class="p">!</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nv">$timeComparator</span><span class="p">:</span><span class="w"> </span><span class="nc">QueryTimeType</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="nv">$filter</span><span class="p">:</span><span class="w"> </span><span class="nc">TaskFilters</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="n">task</span><span class="p">(</span><span class="n">from</span><span class="p">:</span><span class="w"> </span><span class="nv">$from</span><span class="p">,</span><span class="w"> </span><span class="n">to</span><span class="p">:</span><span class="w"> </span><span class="nv">$to</span><span class="p">,</span><span class="w"> </span><span class="n">timeComparator</span><span class="p">:</span><span class="w"> </span><span class="nv">$timeComparator</span><span class="p">,</span><span class="w"> </span><span class="n">filter</span><span class="p">:</span><span class="w"> </span><span class="nv">$filter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">tasks</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="n">id</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
+</span></code></pre></div>
+Copy this into the Variables section:
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nt">&quot;from&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{now()|epoch (inMillis=true) - 86400000 }}&quot;</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">&quot;to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{now()|epoch (inMillis=true)}}&quot;</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">&quot;timeComparator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;createdTime&quot;</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">&quot;filter&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="nt">&quot;and&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">                </span><span class="nt">&quot;isActive&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">                    </span><span class="nt">&quot;equals&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">                </span><span class="nt">&quot;lastQueue&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">                    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">                        </span><span class="nt">&quot;equals&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{queueID}}&quot;</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">                    </span><span class="p">}</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="p">]</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>Parse Settings:</p>
+<p>Content Type: <copy>JSON</copy></p>
+<ul>
+<li>Output Variable: <copy>list</copy></li>
+<li>Path Expression: <copy>$.data.task.tasks..id</copy></li>
+</ul>
+<hr />
+</blockquote>
+<h3 id="add-a-set-variable-node">Add a Set Variable node</h3>
+<blockquote>
+<p>Variable: <copy>position</copy> </p>
+<p>Set Variable: <copy>{{ list | split(TaskID) | last | split(",") | length }}</copy></p>
+<hr />
+<p>Variable: <copy>existingCallback</copy> </p>
+<p>Set Variable: True</p>
+</blockquote>
+<hr />
+<h3 id="add-a-play-message-node">Add a Play message node</h3>
+<blockquote>
+<p>Activity Label: <copy>givePIQ</copy></p>
+<p>Enable Text-To-Speech</p>
+<p>Select the Connector: Cisco Cloud Text-to-Speech</p>
+<p>Click the Add Text-to-Speech Message button</p>
+<p>Delete the Selection for Audio File</p>
+<p>Text-to-Speech Message: <copy><code>&lt;speak&gt; You already have a callback in queue which is the &lt;say-as interpret-as="ordinal"&gt; {{position}} &lt;/say-as&gt; call in line. You will receive a callback when it is your turn. Thank you. &lt;/speak&gt;</code></copy>
+</p>
+</blockquote>
+<hr />
+<h3 id="add-an-end-subflow-node">Add an End Subflow node</h3>
+<blockquote>
+<p>Connect the output node edge from the previous Play Message node to this End Subflow node</p>
+<p>Connect the False node edge from the Condition node to this End Subflow node</p>
+</blockquote>
+<hr />
+<h3 id="check-your-flow"><details><summary>Check your flow</summary><a class="glightbox" href="../assets/dupCheck.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="top"><img alt="" src="../assets/dupCheck.png" /></a></details></h3>
+<hr />
+<h3 id="publish-your-subflow">Publish your Subflow</h3>
+<blockquote>
+<p>Turn on Validation at the bottom right corner of the flow builder</p>
+<p>If there are no Flow Errors, Click Publish</p>
+<p>Add a publish note</p>
+<p>Add Version Label(s): Live </p>
+<p>Click Publish Flow</p>
+</blockquote>
+<hr />
+<h3 id="create-a-new-flow-for-testing">Create a New Flow for testing</h3>
+<blockquote>
+<p>Name: <copy>CL<w class="POD"></w>DupTester</copy>
+</p>
+</blockquote>
+<hr />
+<h3 id="add-a-new-menu-node">Add a new Menu node</h3>
+<blockquote>
+<p>Activity Label: <copy>welcomeMenu</copy></p>
+<p>Enable Text-To-Speech</p>
+<p>Select the Connector: Cisco Cloud Text-to-Speech</p>
+<p>Click the Add Text-to-Speech Message button</p>
+<p>Delete the Selection for Audio File</p>
+<p>Text-to-Speech Message: <copy>Press 1 to check for an existing callback. Press 2 to queue a callback to load the test.</copy></p>
+<p>Select Make Prompt Interruptible</p>
+<p>Digit Number: 1 Link Description: <copy>Test</copy></p>
+<p>Digit Number: 2 Link Description: <copy>Create</copy></p>
+<p>Connect the No-Input Timeout node edge to the input node edge of this node</p>
+<p>Connect the Unmatched Entry node edge to the input node edge of this node
+</p>
+</blockquote>
+<hr />
+<h3 id="add-a-subflow-node-for-cl_dupcheck">Add a Subflow node for CL<w class="POD"></w>_DupCheck</h3>
+<blockquote>
+<p>Subflow Label: <copy>Live</copy></p>
+<p>Map Subflow Input Variables</p>
+<blockquote>
+<p>Click Add New</p>
+<p>Current Flow Variable: <copy>NewPhoneContact.ANI</copy></p>
+<p>Subflow Input Variable: <copy>ANI</copy></p>
+</blockquote>
+<p>Map Subflow Output Variables</p>
+<blockquote>
+<p>Click Add New</p>
+<p>Subflow Output Variable: <copy>existingCallback</copy></p>
+<p>Current Flow Variable: <copy>existingCallback</copy>
+</p>
+</blockquote>
+</blockquote>
+<hr />
+<h3 id="add-a-new-condition-node">Add a new Condition node</h3>
+<blockquote>
+<p>Connect the output node edge from the Subflow node to this Condition node</p>
+<p>Expression: <copy>{{existingCallback}}</copy>
+</p>
+</blockquote>
+<hr />
+<h3 id="add-a-disconnect-contact-node">Add a Disconnect Contact node</h3>
+<blockquote>
+<p>Connect the True node edge from the Condition node to this Disconnect Contact node 
+</p>
+</blockquote>
+<hr />
+<h3 id="add-a-queue-contact-node">Add a Queue Contact node</h3>
+<blockquote>
+<p>Connect the Create node edge from the Menu node added in the previous step to this node</p>
+<p>Select Static Queue</p>
+<p>Queue: <copy><w class="Queue">yourQueueID</w></copy>
+</p>
+</blockquote>
+<hr />
+<h3 id="add-a-callback-node">Add a Callback node</h3>
+<blockquote>
+<p>Connect the outbound node edge from the Queue Contact node to this Callback node</p>
+<p>Callback Dial Number: <copy>NewPhoneContact.ANI</copy></p>
+<p>Register callback to different location: Off</p>
+<p>Static ANI: leave empty
+</p>
+</blockquote>
+<hr />
+<h3 id="add-a-play-message-node_1">Add a Play Message node</h3>
+<blockquote>
+<p>Connect the Output node edge from the Callback node to this Play Message node</p>
+<p>Activity Label: <copy>confirmCB</copy></p>
+<p>Enable Text-To-Speech</p>
+<p>Select the Connector: Cisco Cloud Text-to-Speech</p>
+<p>Click the Add Text-to-Speech Message button</p>
+<p>Delete the Selection for Audio File</p>
+<p>Text-to-Speech Message: <copy>You will receive a callback when it is your turn in the queue.</copy></p>
+<p>Connect the output node edge from this Play Music node to the Disconnect Contact node.
+</p>
+</blockquote>
+<hr />
+<h3 id="check-your-flow_1"><details><summary>Check your flow</summary><a class="glightbox" href="../assets/DupTester.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="top"><img alt="" src="../assets/DupTester.png" /></a></details></h3>
+<hr />
+<h3 id="publish-your-subflow_1">Publish your Subflow</h3>
+<blockquote>
+<p>Turn on Validation at the bottom right corner of the flow builder</p>
+<p>If there are no Flow Errors, Click Publish</p>
+<p>Add a publish note</p>
+<p>Add Version Label(s): Live </p>
+<p>Click Publish Flow</p>
+</blockquote>
+<hr />
+<h3 id="map-your-flow-to-your-inbound-channel">Map your flow to your inbound channel</h3>
+<blockquote>
+<p>Navigate to Control Hub &gt; Contact Center &gt; Channels</p>
+<p>Locate your Inbound Channel (you can use the search): <copy><w class="EP"></w></copy></p>
+<p>Select the Routing Flow: <copy>CL<w class="POD"></w>DupTester</copy>&gt;</p>
+<p>Select the Version Label: Live</p>
+<p>Click Save in the lower right corner of the screen</p>
+</blockquote>
+<hr />
+<h2 id="testing">Testing</h2>
+<ol>
+<li>Launch the <a href="https://desktop.wxcc-us1.cisco.com/">Agent Desktop</a> and log in using the Desktop option.</li>
+<li>On your Agent Desktop, make sure your status is not set to available<ol>
+<li>Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy><ol>
+<li>Choose menu option 1<ol>
+<li>You should take the path to receive a callback</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Using Webex, place another call to your Inbound Channel number <copy><w class="DN"></w></copy><ol>
+<li>Choose option 1 again<ol>
+<li>You should hear that you have a callback pending, your position in the queue, and the call should disconnect</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Optional: Using a mobile device or other phone number, place a call to your Inbound Channel number <copy><w class="DN"></w></copy><ol>
+<li>Choose menu option 1<ol>
+<li>You should take the path to receive a callback</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Optional: Using a mobile device or other phone number, place another call to your Inbound Channel number <copy><w class="DN"></w></copy><ol>
+<li>Choose menu option 1<ol>
+<li>You should hear that you have a callback pending, your position in the queue, and the call should disconnect</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<details class="note">
+<summary>If you made to optional call from another number</summary>
+<ol>
+<li>Go Available in the agent desktop<ol>
+<li>Accept the call on the agent desktop and then answer the call in Webex</li>
+<li>End the call and change your status to not available before wrapping up the call</li>
+<li>Using a mobile device or other phone number, place another call to your Inbound Channel number <copy><w class="DN"></w></copy></li>
+<li>Choose menu option 1<ol>
+<li>You should hear that you have a callback pending, your position in the queue, and the call should disconnect</li>
+</ol>
+</li>
+<li>Go available again, accept the call on the agent desktop, and then answer the call in Webex<ol>
+<li>End the call, wrap up the call, and change your status to not available</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</details>
+<details class="note">
+<summary>If you did not make the optional call from another number</summary>
+<div class="language-text highlight"><pre><span></span><code>1. Go Available in the agent desktop
+1. Accept the call on the agent desktop and then answer the call in Webex
+2. End the call, wrap up the call, and change your status to not available
+</code></pre></div>
+</details>
+<hr />
+<h1 id="once-you-have-completed-the-testing-go-pick-another-adventure-from-the-adventure-section">Once you have completed the testing, go pick another adventure from the <a href="../adventureList/">Adventure Section</a></h1>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Cisco Systems Inc. All Rights Reserved.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "toc.integrate", "content.tooltips", "content.footnote.tooltips", "codehilite"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../js/copy-button.js"></script>
+      
+        <script src="../js/attendee-id.js"></script>
+      
+        <script src="../template_assets/newLoad.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "fade", "closeEffect": "fade", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

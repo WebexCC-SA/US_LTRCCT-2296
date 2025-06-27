@@ -1,0 +1,1008 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer">
+      
+      
+        <meta name="author" content="Kevin Simpson, Chandramouli Vaithiyanathan">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../template_assets/cisco_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Dynamically Controlling Emergency Audio in Webex Contact Center Using API - LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-EWYZYS1K7E"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-EWYZYS1K7E",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-EWYZYS1K7E",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dynamically-controlling-emergency-audio-in-webex-contact-center-using-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" class="md-header__button md-logo" aria-label="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" data-md-component="logo">
+      
+  <img src="../template_assets/cisco_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dynamically Controlling Emergency Audio in Webex Contact Center Using API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../postEvent/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../coreLab1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Core
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../adventureList/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Adventure Section
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cheatsheet/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Cheat Sheet
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" class="md-nav__button md-logo" aria-label="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" data-md-component="logo">
+      
+  <img src="../template_assets/cisco_logo.png" alt="logo">
+
+    </a>
+    LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postEvent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peOverview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding JSON
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventureList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adventure Section
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="dynamically-controlling-emergency-audio-in-webex-contact-center-using-api">Dynamically Controlling Emergency Audio in Webex Contact Center Using API</h1>
+<h2 id="story">Story</h2>
+<blockquote>
+<p>In this lab, you will learn how to <strong>dynamically record or update an Emergency prompt</strong> in Webex Contact Center (WxCC). This is especially useful during emergency scenarios where a <strong>Supervisor or Administrator</strong> needs to record a new message or update an existing one in real-time. For instance, during a sudden outage or a weather-related closure.</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The flow also includes an option to delete an audio file. <strong>However, it is strongly recommended not to delete any prompts during this lab</strong>. The delete option is provided for completeness and for those looking to reuse the same flow in a production environment.</p>
+</div>
+<hr />
+<h2 id="high-level-explanation">High-Level Explanation</h2>
+<blockquote>
+<p>A call enters the <strong>Emergency Message Recording flow</strong>.</p>
+<p>Initial nodes dynamically create an <strong>audio file name</strong> in the format: Emergency_<w class="POD"></w></p>
+<p>The caller is presented with a <strong>menu</strong> that offers three options:</p>
+<ol>
+<li>
+<p><strong>Record a new emergency prompt</strong></p>
+</li>
+<li>
+<p><strong>Update an existing emergency prompt</strong></p>
+</li>
+<li>
+<p><strong>Delete an existing prompt</strong> (Use with caution)</p>
+</li>
+</ol>
+<p>Based on the selected option, the flow uses the <strong>Webex Contact Center Audio File APIs</strong> (via Connector) to:</p>
+<ol>
+<li>
+<p><strong>Record</strong>: Allow the caller to record a new prompt.</p>
+</li>
+<li>
+<p><strong>Update</strong>: Replace the existing prompt with a new recording.</p>
+</li>
+<li>
+<p><strong>Delete</strong>: Remove the prompt (optional; not recommended during this lab).</p>
+</li>
+</ol>
+<p>The newly recorded prompt is stored using the generated file name and can be used later in other flows for emergency call handling.</p>
+</blockquote>
+<hr />
+<h2 id="preconfigured-elements">Preconfigured Elements</h2>
+<blockquote>
+<p>We will importing flow from a <strong>Flow Template</strong>.</p>
+<p>A <strong>Connector</strong> configured to call Webex Contact Center Audio File APIs (upload, update, delete).</p>
+<p>All the  <strong>Local Variables</strong> required for the flow are preconfigured and available when you import the template.</p>
+</blockquote>
+<hr />
+<h3 id="select-a-flow-template">Select a Flow Template</h3>
+<blockquote>
+<p>Under <strong>Flow</strong> &gt; <strong>Manage Flows</strong> &gt; <strong>Create Flows</strong>, select <strong>Flow Template</strong></p>
+<p>Select <strong>"Audio Prompt Recording and Management"</strong></p>
+<p>Click <strong>View Details</strong></p>
+<blockquote>
+<p>Click <strong>Select Template</strong></p>
+</blockquote>
+<p>Click <strong>Next</strong></p>
+<blockquote>
+<p>Rename the  flow  <copy>CL<w class="POD"></w>_emeraudio</copy></p>
+</blockquote>
+<p>Click <strong>Create Flow</strong> and confirm that the flow loads in the Flow Canvas</p>
+<p>Under <strong>Flow</strong> &gt; <strong>Manage Flows</strong> &gt; <strong>Create Flows</strong>, select <strong>Flow Template</strong></p>
+<p>Select <strong>"Audio Prompt Recording and Management"</strong></p>
+<p>Click <strong>View Details</strong></p>
+<blockquote>
+<p>Click <strong>Select Template</strong></p>
+</blockquote>
+<p>Click <strong>Next</strong></p>
+<blockquote>
+<p>Rename the  flow  <copy>CL<w class="POD"></w>_emeraudio</copy></p>
+</blockquote>
+<p>Click <strong>Create Flow</strong> and confirm that the flow loads in the Flow Canvas</p>
+</blockquote>
+<h3 id="show-me"><details><summary>Show Me</summary><a class="glightbox" href="../assets/EA_CreateFlow.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="top"><img alt="" src="../assets/EA_CreateFlow.gif" /></a></details></h3>
+<h3 id="add-a-play-message-node">Add a Play Message node</h3>
+<blockquote>
+<p><code>Edit</code> the flow </p>
+<p>Activity Label: <copy>Play_wlc</copy></p>
+<p>Enable Text-To-Speech</p>
+<p>Select the Connector: Cisco Cloud Text-to-Speech</p>
+<p>Click the Add Text-to-Speech Message button</p>
+<p>Delete the Selection for Audio File</p>
+<p>Text-to-Speech Message: <copy>Welcome to Cisco Live, Let's set the name of the Emergency file, before we play with updating the same.</copy></p>
+<blockquote>
+<p>Delete the existing path from  New Contact node and connect it  to the play message node</p>
+</blockquote>
+</blockquote>
+<hr />
+<h3 id="add-a-collect-digits-node">Add a Collect Digits node</h3>
+<blockquote>
+<p>Activity Label: <copy>Pod_ID</copy></p>
+<p>Connect the Play message output node edge to Collect Digit node</p>
+<p>Enable Text-To-Speech</p>
+<p>Select the Connector: Cisco Cloud Text-to-Speech</p>
+<p>Click the Add Text-to-Speech Message button</p>
+<p>Delete the Selection for Audio File</p>
+<p>Text-to-Speech Message: <copy>Please enter your 3 digit pod id</copy>
+</p>
+</blockquote>
+<hr />
+<h3 id="add-a-set-variable-node">Add a Set Variable node</h3>
+<blockquote>
+<p>Connect the Collect Digit Node   edge to Set Variable node</p>
+<p>Activity Label: <copy>Set_AudioFileName</copy></p>
+<p>Variable: <copy>audioFileName</copy></p>
+<p>Select Set Value</p>
+<p>Value <copy><code>{{"Emergency_" ~ Pod_ID.DigitsEntered ~ ".wav"}}</code></copy>
+</p>
+</blockquote>
+<hr />
+<h3 id="add-an-another-set-variable-node">Add an another Set Variable node</h3>
+<blockquote>
+<p>Connect the Set Variable Node   edge to this Set Variable node</p>
+<p>Activity Label: <copy>Set_updatedFile</copy></p>
+<p>Variable: <copy>newFileName</copy></p>
+<p>Select Set Variable</p>
+<p>and select preconfigured <code>audioFileName</code> from the drop down</p>
+<blockquote>
+<p>Connect the this Set Variable Node to Menu Node</p>
+</blockquote>
+</blockquote>
+<hr />
+<h3 id="check-your-flow"><details><summary>Check your flow</summary><a class="glightbox" href="../assets/EA_Flowwith4nodes.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="top"><img alt="" src="../assets/EA_Flowwith4nodes.jpg" /></a></details></h3>
+<hr />
+<h3 id="publish-your-flow">Publish your flow</h3>
+<blockquote>
+<p>Turn on Validation at the bottom right corner of the flow builder</p>
+<p>If there are no Flow Errors, Click Publish</p>
+<p>Add a publish note</p>
+<p>Add Version Label(s): Live </p>
+<p>Click Publish Flow</p>
+</blockquote>
+<hr />
+<h3 id="map-your-flow-to-your-inbound-channel">Map your flow to your inbound channel</h3>
+<blockquote>
+<p>Navigate to Control Hub &gt; Contact Center &gt; Channels</p>
+<p>Locate your Inbound Channel (you can use the search): <copy><w class="EP"></w></copy></p>
+<p>Select the Routing Flow: <copy>CL<w class="POD"></w>_emeraudio</copy></p>
+<p>Select the Version Label: Live</p>
+<p>Click Save in the lower right corner of the screen</p>
+</blockquote>
+<hr />
+<h2 id="testing-the-flow">Testing the Flow</h2>
+<blockquote>
+<p>Call into the flow. You will be greeted and asked to enter your <strong>Pod ID</strong>.</p>
+<p>Upon entering the Pod ID, a variable will be dynamically created in the format: Emergency_<w class="POD"></w>.wav```</p>
+<p>A menu will then be offered with the following options:</p>
+<blockquote>
+<p><strong>1</strong> to create a new prompt</p>
+<p><strong>2</strong> to update an existing prompt</p>
+<p><strong>3</strong> to delete an existing prompt ( <strong>please do not perform this option during the lab</strong>)</p>
+</blockquote>
+</blockquote>
+<h3 id="to-create-a-new-prompt">To create a new prompt:</h3>
+<blockquote>
+<p>Select <strong>Option 1</strong> from the menu.</p>
+<p>Record the prompt after the beep, then press <strong>#</strong> to finish.</p>
+<p>Go to <strong>Control Hub → Contact Center → Audio Files</strong>.</p>
+<p>Sort the list by <strong>Date Created</strong> and verify that a new prompt has been created.</p>
+<p>You can <strong>download and play</strong> the prompt to confirm the recording.
+</p>
+</blockquote>
+<h3 id="to-update-an-existing-prompt">To update an existing prompt:</h3>
+<blockquote>
+<p>Select <strong>Option 2</strong> from the menu.</p>
+<p>Record the new message after the beep, then press <strong>#</strong> to finish.</p>
+<p>Go to <strong>Control Hub → Contact Center → Audio Files</strong>.</p>
+<p>Sort the list by <strong>Date Modified</strong> and verify that the prompt has been updated.</p>
+<p>Download and play it to confirm the new message is applied.
+</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>This test demonstrates how supervisors or admins can manage emergency Audio prompts dynamically in real-time using the IVR flow integrated with Webex Contact Center APIs.</p>
+</blockquote>
+<hr />
+<h2 id="debugging-the-flow">Debugging the Flow</h2>
+<blockquote>
+<p>Open the <strong>Debugger</strong> in the Flow Builder</p>
+<p>Select the <strong>last interaction</strong> from the top of the list</p>
+<p>Trace the call steps</p>
+<blockquote>
+<p>You can view the <strong>path</strong>, <strong>input/output variables</strong>, and <strong>events</strong>
+Open the <strong>Debugger</strong> in the Flow Builder</p>
+</blockquote>
+<p>Select the <strong>last interaction</strong> from the top of the list</p>
+<p>Trace the call steps</p>
+<blockquote>
+<p>You can view the <strong>path</strong>, <strong>input/output variables</strong>, and <strong>events</strong></p>
+</blockquote>
+</blockquote>
+<hr />
+<h1 id="once-you-have-completed-the-testing-go-pick-another-adventure-from-the-adventure-section">Once you have completed the testing, go pick another adventure from the <a href="../adventureList/">Adventure Section</a></h1>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Cisco Systems Inc. All Rights Reserved.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "toc.integrate", "content.tooltips", "content.footnote.tooltips", "codehilite"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../js/copy-button.js"></script>
+      
+        <script src="../js/attendee-id.js"></script>
+      
+        <script src="../template_assets/newLoad.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "fade", "closeEffect": "fade", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

@@ -1,0 +1,1020 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer">
+      
+      
+        <meta name="author" content="Kevin Simpson, Chandramouli Vaithiyanathan">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../template_assets/cisco_logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Multiple Lines of Business Using the Same Flow - LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-EWYZYS1K7E"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-EWYZYS1K7E",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-EWYZYS1K7E",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#multiple-lines-of-business-using-the-same-flow" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" class="md-header__button md-logo" aria-label="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" data-md-component="logo">
+      
+  <img src="../template_assets/cisco_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Multiple Lines of Business Using the Same Flow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../postEvent/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../coreLab1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Core
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../adventureList/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Adventure Section
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cheatsheet/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Cheat Sheet
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" class="md-nav__button md-logo" aria-label="LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer" data-md-component="logo">
+      
+  <img src="../template_assets/cisco_logo.png" alt="logo">
+
+    </a>
+    LTRCCT-2296 From Good to Great - Enhancing Customer Experience with the Webex Contact Center Flow Designer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postEvent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../peOverview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coreLab5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lab 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Understanding JSON
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adventureList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Adventure Section
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="multiple-lines-of-business-using-the-same-flow">Multiple Lines of Business Using the Same Flow</h1>
+<h2 id="story">Story</h2>
+<blockquote>
+<p>You do not always need to create a new flow for each line of business in the contact center, instead you can often reuse your flow logic and account for the differences including different queues and wait treatments.  In this lab you will be adding a new line of business to the CL<w class="POD"></w>_core</copy> flow.</p>
+</blockquote>
+<h2 id="build">Build</h2>
+<h3 id="open-flow-cl_core">Open flow <copy>CL<w class="POD"></w>_core</copy></h3>
+<blockquote>
+<p>Toggle the Edit switch on
+</p>
+</blockquote>
+<hr />
+<h3 id="replace-the-welcome-play-message-node-with-a-menu-node">Replace the welcome Play Message node with a Menu node</h3>
+<blockquote>
+<p>Click on the welcome Play Message and delete it.</p>
+<p>Add a new Menu node</p>
+<blockquote>
+<p>Activity Label: <copy>welcomeMenu</copy></p>
+<p>Enable Text-To-Speech</p>
+<p>Select the Connector: Cisco Cloud Text-to-Speech</p>
+<p>Click the Add Text-to-Speech Message button</p>
+<p>Delete the Selection for Audio File</p>
+<p>Text-to-Speech Message: <copy>Thank you for calling Acme Corp. where we have been helping coyotes reach space since 1949.</copy></p>
+<p>Click the Add Text-to-Speech Message button</p>
+<p>Text-to-Speech Message: <copy>For Sales, press 1.  For Service, press 2.</copy></p>
+<p>Select Make Prompt Interruptible</p>
+<p>Digit Number: 1 Link Description: <copy>Sales</copy></p>
+<p>Digit Number: 2 Link Description: <copy>Service</copy></p>
+<p>Connect the No-Input Timeout node edge to the input node edge of this node</p>
+<p>Connect the Unmatched Entry node edge to the input node edge of this node</p>
+<p>Connect the Sales node edge to the Queue Contact node
+</p>
+</blockquote>
+</blockquote>
+<hr />
+<h3 id="move-the-lunchcheck-node-after-the-queue-contact-node">Move the LunchCheck node after the Queue Contact node</h3>
+<blockquote>
+<p>Delete the connection between the Queue Contact node and the Play Music node</p>
+<p>Delete the connection between the LunchCheck False node edge and the Queue Contact node</p>
+<p>Connect the Queue Contact output node edge to the LunchCheck input node edge (you may want to move the nodes around to make things cleaner)</p>
+<p>Connect the LunchCheck False node edge to the Play Music node</p>
+</blockquote>
+<hr />
+<h3 id="add-a-queue-contact-node">Add a Queue Contact node</h3>
+<blockquote>
+<p>Activity Label: <copy>serviceQueue</copy></p>
+<p>Select Static Queue</p>
+<p>Queue: <copy><w class="Queue2">yourQueueID</w></copy></p>
+<p>Connect the Service node edge from WelcomeMenu to the input node edge of this node</p>
+<p>Connect the output node edge of this node to the play music node</p>
+</blockquote>
+<hr />
+<details class="note">
+<summary>If you have already completed Offering a Callback option to calls actively waiting in the queue</summary>
+<h3 id="update-the-subflow-node-with-a-new-variable-mapping">Update the Subflow Node with a new variable mapping</h3>
+<blockquote>
+<p>Open the Subflow node</p>
+<p>Scroll down to the Subflow Input Variables</p>
+<p>Click Add New</p>
+<p>Current Flow Variable: <copy>welcomeMenu.OptionEntered</copy></p>
+<p>Subflow Input Variable: <copy>LOB</copy>
+</p>
+</blockquote>
+<hr />
+<h3 id="edit-the-first-case-in-the-cbchoice-node">Edit the first case in the CBchoice node</h3>
+<blockquote>
+<p>Open the CBchoice node</p>
+<p>Change the text in the first Link Description from {{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch"}} to <copy>{{cbChoice == false and BusinessHours.WorkingHoursShift_Name == "Lunch" and welcomeMenu.OptionEntered == "1"}}</copy></p>
+</blockquote>
+<h3 id="check-your-flow"><details><summary>Check your flow</summary><a class="glightbox" href="../assets/multiWithCBpart1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="top"><img alt="" src="../assets/multiWithCBpart1.png" /></a></details></h3>
+</details>
+<hr />
+<h3 id="create-a-json-flow-variable">Create a JSON flow variable</h3>
+<blockquote>
+<p>Name: <copy>LOBmessages</copy></p>
+<p>Type: JSON</p>
+<p>Default Value: <copy>{}</copy></p>
+</blockquote>
+<hr />
+<h3 id="add-a-new-function-node">Add a new Function node</h3>
+<blockquote>
+<p>Function Name: LOBwaitMessages</p>
+<p>Function Version Label: Live</p>
+<p>Function Input Variables:</p>
+<blockquote>
+<p>Current Flow Variable: <copy>welcomeMenu.OptionEntered</copy>  Function input Variable: <copy>LOB</copy></p>
+</blockquote>
+<p>Output Settings:</p>
+<blockquote>
+<p>Output Variable: <copy>LOBmessages</copy></p>
+<p>Path Expression: <copy>$.messageList</copy></p>
+</blockquote>
+<p>Delete the connection between the serviceQueue node and the Play Music node</p>
+<p>Connect the serviceQueue node to this Function node</p>
+<p>Delete the connection between the False node edge of LunchCheck and the Play Music node</p>
+<p>Connect the False node edge of LunchCheck to this Function node</p>
+<p>Connect the output node edge of this Function node to the Play Music node
+</p>
+</blockquote>
+<hr />
+<details class="note">
+<summary>If you have already completed Offering a Callback option to calls actively waiting in the queue</summary>
+<h3 id="add-a-play-message-node">Add a Play message node</h3>
+<blockquote>
+<p>Activity Label: <copy>LOBmessages1</copy></p>
+<p>Enable Text-To-Speech</p>
+<p>Select the Connector: Cisco Cloud Text-to-Speech</p>
+<p>Click the Add Text-to-Speech Message button</p>
+<p>Delete the Selection for Audio File</p>
+<p>Text-to-Speech Message: <copy>{{LOBmessages[(counter % (LOBmessages| length))] }}</copy></p>
+<p>Delete the connection between the Set Variable node for the counter and the Condition node</p>
+<p>Connect the output node edge of Set Variable node to this Play Message node</p>
+<p>Connect the output node edge of this Play Message node to the Condition node</p>
+</blockquote>
+<hr />
+<h3 id="delete-the-old-play-message-nodes">Delete the old Play Message nodes</h3>
+<blockquote>
+<p>Delete both play message nodes which were previously used for the alternating messages</p>
+<p>Connect the True node edge of the Condition node to the Subflow node</p>
+<p>Connect the False node edge of the Condition node to the Play Music node</p>
+</blockquote>
+<hr />
+<h3 id="edit-the-callback-node-settings">Edit the Callback node settings</h3>
+<blockquote>
+<p>Open the Callback node</p>
+<p>Find the Register callback to different location switch and turn it off
+</p>
+</blockquote>
+<hr />
+<h3 id="check-your-flow_1"><details><summary>Check your flow</summary><a class="glightbox" href="../assets/multiWithCBpart2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="top"><img alt="" src="../assets/multiWithCBpart2.png" /></a></details></h3>
+</details>
+<details class="note">
+<summary>If you have NOT completed Offering a Callback option to calls actively waiting in the queue</summary>
+<h3 id="add-a-play-message-node_1">Add a Play message node</h3>
+<blockquote>
+<p>Activity Label: <copy>LOBmessages1</copy></p>
+<p>Enable Text-To-Speech</p>
+<p>Select the Connector: Cisco Cloud Text-to-Speech</p>
+<p>Click the Add Text-to-Speech Message button</p>
+<p>Delete the Selection for Audio File</p>
+<p>Text-to-Speech Message: <copy>{{LOBmessages[(counter % (LOBmessages| length))] }}</copy></p>
+<p>Delete the Condition node</p>
+<p>Delete both play message nodes which were previously used for the alternating messages</p>
+<p>Connect the output node edge of Set Variable node to this Play Message node</p>
+<p>Connect the output node edge of this Play Message node to the Play Music node</p>
+</blockquote>
+<hr />
+<h3 id="check-your-flow_2"><details><summary>Check your flow</summary><a class="glightbox" href="../assets/multiNoCBpart2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="top"><img alt="" src="../assets/multiNoCBpart2.png" /></a></details></h3>
+</details>
+<hr />
+<h3 id="publish-your-flow">Publish your flow</h3>
+<blockquote>
+<p>Turn on Validation at the bottom right corner of the flow builder</p>
+<p>If there are no Flow Errors, Click Publish</p>
+<p>Add a publish note</p>
+<p>Add Version Label(s): Test </p>
+<p>Click Publish Flow</p>
+</blockquote>
+<hr />
+<h3 id="map-your-flow-to-your-inbound-channel">Map your flow to your inbound channel</h3>
+<blockquote>
+<p>Navigate to Control Hub &gt; Contact Center &gt; Channels</p>
+<p>Locate your Inbound Channel (you can use the search): <copy><w class="EP"></w></copy></p>
+<p>Select the Routing Flow: <copy>CL<w class="POD"></w>_core</copy></p>
+<p>Select the Version Label: Test</p>
+<p>Click Save in the lower right corner of the screen</p>
+</blockquote>
+<hr />
+<h3 id="if-you-are-still-in-the-lunch-portion-of-the-day-adjust-the-lunch-and-open-pm-shifts-to-allow-open-pm-to-be-active">If you are still in the lunch portion of the day, adjust the lunch and Open PM Shifts to allow Open PM to be active</h3>
+<hr />
+<h2 id="testing">Testing</h2>
+<ol>
+<li>Launch the <a href="https://desktop.wxcc-us1.cisco.com/">Agent Desktop</a> and log in using the Desktop option.<ol>
+<li>Make sure you are logged into <w class="Team2"><w></li>
+<li>On your Agent Desktop, make sure your status is not set to available</li>
+</ol>
+</li>
+<li>Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy><ol>
+<li>Choose option 1 for Sales</li>
+<li>If you have previously completed Offering a Callback option to calls actively waiting in the queue, do not elect for a callback<ol>
+<li>You should hear alternating music and Sales messages <ol>
+<li>How many messages were there?</li>
+</ol>
+</li>
+<li>End the call</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Using Webex, place a call to your Inbound Channel number <copy><w class="DN"></w></copy><ol>
+<li>Choose option 2 for Service</li>
+<li>If you have previously completed Offering a Callback option to calls actively waiting in the queue, do not elect for a callback<ol>
+<li>You should hear alternating music and Service messages <ol>
+<li>How many messages were there?</li>
+</ol>
+</li>
+<li>Set your Status to Available </li>
+<li>After the call is connected end the call, set your status as NOT Available, wrap-up the call, and log back into <w class="Team"><w></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h1 id="once-you-have-completed-the-testing-go-pick-another-adventure-from-the-adventure-section">Once you have completed the testing, go pick another adventure from the <a href="../adventureList/">Adventure Section</a></h1>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Cisco Systems Inc. All Rights Reserved.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.footer", "search.suggest", "content.code.copy", "toc.integrate", "content.tooltips", "content.footnote.tooltips", "codehilite"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../js/copy-button.js"></script>
+      
+        <script src="../js/attendee-id.js"></script>
+      
+        <script src="../template_assets/newLoad.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "fade", "closeEffect": "fade", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
