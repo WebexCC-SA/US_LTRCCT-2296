@@ -48,6 +48,27 @@ button:hover{
 
 ---
 
+### Create a Reportable Global Variable
+
+> Name: <copy>simulatedCSAT</copy>
+>
+> Type: Decimal
+>
+> Default Value: <copy>0.0</copy>
+>
+> Make Reportable: True
+>
+> Make Agent Viewable: True
+>
+> Desktop Label: <copy>Simulated CSAT</copy>
+>
+> Edit on Desktop: True
+>
+> ??? Note "Show Me"    
+    ![](./assets/createGV.gif)
+
+---
+
 ## Ensure that you have a Webex Contact Center connector configured
 > Navigate to Integrations in the left pane of Control Hub
 >
